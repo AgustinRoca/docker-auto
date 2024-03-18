@@ -17,6 +17,11 @@ RUN sudo apt-get install ros-noetic-dbw-mkz -y
 RUN sudo apt-get install ros-noetic-dataspeed-boot-usb -y
 RUN sudo apt-get install ros-noetic-dataspeed-dbw-simulator -y
 RUN sudo apt-get install ros-noetic-velodyne -y
+RUN sudo apt-get install ros-noetic-ublox -y
+RUN sudo apt-get install ros-noetic-geographic-msgs -y
+RUN sudo apt-get install ros-noetic-mapviz -y
+RUN sudo apt-get install ros-noetic-nmea-msgs -y
+RUN sudo apt-get install ros-noetic-mavros-msgs -y
 RUN sudo apt update && sudo apt upgrade -y && rosdep update
 
 RUN git config --global credential.helper store
