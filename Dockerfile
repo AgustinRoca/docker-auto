@@ -22,9 +22,13 @@ RUN sudo apt-get install ros-noetic-geographic-msgs -y
 RUN sudo apt-get install ros-noetic-mapviz -y
 RUN sudo apt-get install ros-noetic-nmea-msgs -y
 RUN sudo apt-get install ros-noetic-mavros-msgs -y
+RUN sudo apt-get install ros-noetic-hector-trajectory-server -y
+RUN sudo apt-get install ros-noetic-robot-localization -y
 RUN sudo apt update && sudo apt upgrade -y && rosdep update
 
 RUN git config --global credential.helper store
+
+RUN echo "cd auto; source devel/setup.bash" >> ~/.bashrc
 
 ## Run with:
 # rocker --x11 --nvidia ros:noetic-desktop-full bash
